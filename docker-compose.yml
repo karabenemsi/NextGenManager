@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  nextgenmanagerserver:
+    image: nextgenmanagerserver
+    build:
+      context: .
+      dockerfile: Server\Dockerfile
