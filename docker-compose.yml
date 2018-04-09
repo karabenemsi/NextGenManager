@@ -1,8 +1,26 @@
 version: '3'
 
 services:
-  nextgenmanagerserver:
-    image: nextgenmanagerserver
+  ngmapi:
     build:
-      context: .
-      dockerfile: Server\Dockerfile
+      context: ./
+      dockerfile: Server/Dockerfile
+    imager: ngmapi
+    container_name: ngmapi
+    expose:
+      - "3000"
+
+  ngmclient:
+    build:
+      context: ./
+      dockerfile: Client/Dockerfile
+      args: 
+        env: prod
+    image: ngmclient
+    container_name: ngmclient
+    ports:
+      - "80":"5342"
+
+
+
+
