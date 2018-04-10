@@ -19,8 +19,4 @@ services:
     image: ngmclient
     container_name: ngmclient
     ports:
-      - "80":"5342"
-
-
-
-
+      -"80":"5342"

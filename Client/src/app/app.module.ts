@@ -3,14 +3,25 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app/app.component';
+import { NGMRouterModule } from './Modules/router.module';
+import { MaterialModule } from './Modules/material.module';
+import { NavigationMainComponent } from './navigation-main/navigation-main.component';
+import { NavigationSideComponent } from './navigation-side/navigation-side.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavigationMainComponent,
+    NavigationSideComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    NGMRouterModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

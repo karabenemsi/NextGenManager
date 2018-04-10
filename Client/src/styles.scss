@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+// 1 - TOOLS
+@import 'scss/1_tools/fonts';
+@import '../node_modules/normalize.css/normalize.css';
+// @import 'scss/1_tools/materialdesignicons/materialdesignicons';
+// 2 - Definitions
+@import 'scss/2_defs/vars';
+@import 'scss/2_defs/urls';
+// @import 'scss/2_defs/mixins';
+// 3 - BASICS
+@import 'scss/3_basics/body';
+@import 'scss/3_basics/selection';
+@import 'scss/3_basics/links';
+@import 'scss/3_basics/scrollbar';
+@import 'scss/3_basics/typography';
+@import 'scss/3_basics/buttons';
+@import 'scss/3_basics/code';
+@import 'scss/3_basics/lists';
+@import 'scss/3_basics/icons';
+@import 'scss/3_basics/sections';
+@import 'scss/3_basics/main';
+
+
