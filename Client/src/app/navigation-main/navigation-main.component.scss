@@ -1,51 +1,54 @@
+@import '../../scss/2_defs/_vars.scss';
 header {
-    width: 100%;
-    height: 3rem;
-    background: #21a512;
-    display: flex;
-    color: #fff;
-    align-items: center;
+  width: 100%;
+  height: 3rem;
+  background: #5563B2;
+  display: flex;
+  color: #fff;
+  align-items: center;
 
-    .toggle-sidebar{
-        width: 3rem;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        transition: background-color 0.2s ease-in-out;
-        &:hover{
-            background: darken(#21a512, 10)
-        }
+  .toggle-sidebar {
+    width: 3rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background: darken(#5D6D78, 10)
     }
+  }
 }
 nav {
-    width: 100%;
-    ul {
-        list-style: none;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        margin: 0;
-        padding: 0 0.5rem;
-        height: 100%;
-    }
+  width: 100%;
 
-    li {
-        padding: 0;
-        margin: 0;
-    }
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0 0.5rem;
+    height: 100%;
+  }
 
-    a {
-        color: #fff;
-        display: block;
-        padding: 1rem;
-        margin: 0;
-        line-height: 1;
-        transition: background-color 0.2s ease-in-out;
-        &:hover {
-          background: darken(#21a512, 10)
-        }
+  li {
+    padding: 0;
+    margin: 0;
+  }
 
+  a {
+    color: #fff;
+    display: block;
+    padding: 1rem;
+    margin: 0;
+    line-height: 1;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background: darken(#5D6D78, 10)
     }
+  }
 }

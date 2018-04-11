@@ -1,4 +1,4 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import 'theme.scss';
 
 // 1 - TOOLS
 @import 'scss/1_tools/fonts';
@@ -20,5 +20,8 @@
 @import 'scss/3_basics/icons';
 @import 'scss/3_basics/sections';
 @import 'scss/3_basics/main';
+
+
+@import 'scss/4_material-custom/accordion.scss';
 
 

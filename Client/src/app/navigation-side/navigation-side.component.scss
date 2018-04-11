@@ -1,52 +1,40 @@
-.sidenav{
-    height: 100%;
-    background: #666;
-    color: #fff;
-    padding: 1rem;
-    & > ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        & > li {
-            padding: 0 0 0.5rem;
-            margin: 0;
-        }
+@import '../../scss/2_defs/_vars.scss';
+.sidenav {
+  height: 100%;
+  background: $c_gray;
+  color: $c_gray_f;
+
+  .maxlength {
+    max-width: 15rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .number {
+    font-weight: 600;
+  }
+
+  .customer {
+    font-size: 0.8rem;
+    padding: 0.1rem;
+    color: lighten($c_gray_f, 40);
+  }
+
+  & > h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 1rem 0.2rem;
+  }
+
+  mat-accordion {
+    mat-expansion-panel {
+      box-shadow: none;
+      color: $c_gray_f;
+      background: inherit;
     }
+  }
 }
-.sublist {
-    list-style: none;
-    padding: 0.5rem 0 1rem 0.5rem;
 
-    li {
-        padding: 0;
-    }
-    a {
-        color: #fff;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: flex-start
-    }
 
-    .maxlength {
-        max-width: 8.5rem;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-    }
 
-    .number{
-        padding-right: 0.7rem;
-        font-weight: 600;
-    }
-
-    .name {
-        padding-right: 0.6rem;
-    }
-
-    .customer {
-        font-size: 0.8rem;
-        padding: 0.1rem;
-        color: #ccc;
-        max-width: 5rem;
-    }
-}

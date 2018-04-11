@@ -1,38 +1,97 @@
 <nav class="sidenav">
-  <ul>
-    <li><h3>Aktive Aufträge</h3>
-      <ul class="sublist">
-        <li>
-          <a>
-            <div class="number">NG-723</div><div class="name maxlength">KTS-Schrauben</div><div class="customer maxlength">IFK Baustahl</div>
-          </a>
-        </li>
-        <li>
-          <a>
-            <div class="number">NG-724</div><div class="name maxlength">Stahl-Bolzen</div><div class="customer maxlength">Gerd Müller</div>
-          </a>
-        </li>
-        <li>
-          <a>
-            <div class="number">NG-725</div><div class="name maxlength">Fräs-Teile</div><div class="customer maxlength">IFK Baustahl</div>
-          </a>
-        </li>
-        <li>
-          <a>
-            <div class="number">NG-726</div><div class="name maxlength">Auftrag mit viel zu langem Namen für das Feld</div><div class="customer maxlength">Die Firma mit nem super langen Namen</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li><h3>Ideen</h3>
-      <ul class="sublist">
-        <li></li>
-      </ul>
-    </li>
-    <li><h3>Abgeschlossene Aufträge</h3>
-      <ul class="sublist">
-        <li></li>
-      </ul>
-    </li>
-  </ul>
+  <div class="button-container center">
+    <a class="button" mat-raised-button>Neuer Auftrag</a>
+  </div>
+  <mat-accordion multi="true">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Aktive Aufträge
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-nav-list>
+        <a mat-list-item href="">
+          <h3 matLine class="nvlst-topline maxlength">
+            <span class="number">NG-435</span>
+            KTS-Schrauben
+          </h3>
+          <p matLine class="customer maxlength">IFK Baustahl</p>
+        </a>
+        <a mat-list-item href="">
+          <h3 matLine class="nvlst-topline maxlength">
+            <span class="number">NG-164</span>
+            Stahl-Bolzen
+          </h3>
+          <p matLine class="customer maxlength">Gerd Müller</p>
+        </a>
+        <a mat-list-item href="">
+          <h3 matLine class="nvlst-topline maxlength">
+            <span class="number">NG-354</span>
+            Fräs-Teile
+          </h3>
+          <p matLine class="customer maxlength">IFK Baustahl</p>
+        </a>
+        <a mat-list-item href="">
+          <h3 matLine class="nvlst-topline maxlength">
+            <span class="number">NG-354</span>
+            Auftrag mit viel zu langem Namen für das Feld
+          </h3>
+          <p matLine class="customer maxlength">Die Firma mit nem super langen Namen</p>
+        </a>
+      </mat-nav-list>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Ideen
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-nav-list>
+        <a mat-list-item href="">
+          <h3 matLine class="nvlst-topline maxlength">
+            <span class="number">NG-354</span>
+            Fräs-Teile
+          </h3>
+          <p matLine class="customer maxlength">IFK Baustahl</p>
+        </a>
+        <a mat-list-item href="">
+          <h3 matLine class="nvlst-topline maxlength">
+            <span class="number">NG-354</span>
+            Fräs-Teile
+          </h3>
+          <p matLine class="customer maxlength">IFK Baustahl</p>
+        </a>
+      </mat-nav-list>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Abgeschlossene Aufträge
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-nav-list>
+        <a mat-list-item href="">
+          <h3 matLine class="nvlst-topline maxlength">
+            <span class="number">NG-354</span>
+            Fräs-Teile
+          </h3>
+          <p matLine class="customer maxlength">IFK Baustahl</p>
+        </a>
+        <a mat-list-item href="">
+          <h3 matLine class="nvlst-topline maxlength">
+            <span class="number">NG-354</span>
+            Fräs-Teile
+          </h3>
+          <p matLine class="customer maxlength">IFK Baustahl</p>
+        </a>
+        <a mat-list-item href="">
+          <h3 matLine class="nvlst-topline maxlength">
+            <span class="number">NG-354</span>
+            Fräs-Teile
+          </h3>
+          <p matLine class="customer maxlength">IFK Baustahl</p>
+        </a>
+      </mat-nav-list>
+    </mat-expansion-panel>
+  </mat-accordion>
 </nav>
