@@ -83,6 +83,9 @@
     <Content Include="src\favicon.ico" />
     <Content Include="src\tsconfig.app.json" />
     <Content Include="src\tsconfig.spec.json" />
+    <TypeScriptCompile Include="src\app\Models\Order.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\Modules\material.module.ts" />
     <TypeScriptCompile Include="src\app\Modules\router.module.ts" />
     <TypeScriptCompile Include="src\app\navigation-main\navigation-main.component.spec.ts" />
