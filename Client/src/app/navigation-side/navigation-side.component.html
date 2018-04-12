@@ -3,7 +3,7 @@
     <a class="button" mat-raised-button>Neuer Auftrag</a>
   </div>
   <mat-accordion multi="true">
-    <mat-expansion-panel>
+    <mat-expansion-panel expanded>
       <mat-expansion-panel-header>
         <mat-panel-title>
           Aktive Aufträge
@@ -15,12 +15,12 @@
             <span class="number">NG-435</span>
             KTS-Schrauben
           </h3>
-          <p matLine class="customer maxlength">IFK Baustahl</p>
-          <div matLine class="iconbar">
-            <mat-icon mat-tooltip="Auftrag erhalten">inbox</mat-icon>
-            <mat-icon mat-tooltip="In Bearbeitung">build</mat-icon>
-            <mat-icon mat-tooltip="Rechnung Ausstehend">money</mat-icon>
-            <mat-icon mat-tooltip="Abgeschlossen">all done</mat-icon>
+          <p matLine class="customer maxlength">SMS Maschinenbau GmbH</p>
+          <div class="iconbar">
+            <mat-icon>move_to_inbox</mat-icon>
+            <mat-icon>build</mat-icon>
+            <mat-icon>attach_money</mat-icon>
+            <mat-icon>done_all</mat-icon>
           </div>
         </a>
         <a mat-list-item href="">
@@ -29,6 +29,10 @@
             Stahl-Bolzen
           </h3>
           <p matLine class="customer maxlength">Gerd Müller</p>
+          <div class="iconbar">
+            <mat-icon>move_to_inbox</mat-icon>
+            <mat-icon>build</mat-icon>
+          </div>
         </a>
         <a mat-list-item href="">
           <h3 matLine class="nvlst-topline maxlength">
@@ -36,6 +40,11 @@
             Fräs-Teile
           </h3>
           <p matLine class="customer maxlength">IFK Baustahl</p>
+          <div class="iconbar">
+            <mat-icon>move_to_inbox</mat-icon>
+            <mat-icon>build</mat-icon>
+            <mat-icon>attach_money</mat-icon>
+          </div>
         </a>
         <a mat-list-item href="">
           <h3 matLine class="nvlst-topline maxlength">
@@ -43,10 +52,16 @@
             Auftrag mit viel zu langem Namen für das Feld
           </h3>
           <p matLine class="customer maxlength">Die Firma mit nem super langen Namen</p>
+          <div class="iconbar">
+            <mat-icon>move_to_inbox</mat-icon>
+            <mat-icon>build</mat-icon>
+            <mat-icon>attach_money</mat-icon>
+            <mat-icon>done_all</mat-icon>
+          </div>
         </a>
       </mat-nav-list>
     </mat-expansion-panel>
-    <mat-expansion-panel>
+    <mat-expansion-panel expanded>
       <mat-expansion-panel-header>
         <mat-panel-title>
           Ideen

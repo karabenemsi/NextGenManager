@@ -17,44 +17,89 @@
       <mat-tab label="Überblick">
         <div class="flex-wrapper">
 
-          <mat-card class="half">
-              Kunde
-          </mat-card>
-
-          <mat-card class="half">
-            Zuständig
-          </mat-card>
-
-          <mat-card  class="full">
-            <mat-table #table [dataSource]="dataSourceShort">
-              <ng-container matColumnDef="dateTime">
-                <mat-header-cell *matHeaderCellDef> Datum </mat-header-cell>
-                <mat-cell *matCellDef="let log"> {{log.dateTime}} </mat-cell>
-              </ng-container>
-              <ng-container matColumnDef="employee">
-                <mat-header-cell *matHeaderCellDef> Mitarbeiter </mat-header-cell>
-                <mat-cell *matCellDef="let log"> {{log.employee}} </mat-cell>
-              </ng-container>
-              <ng-container matColumnDef="logText">
-                <mat-header-cell *matHeaderCellDef> Text </mat-header-cell>
-                <mat-cell *matCellDef="let log"> {{log.logText}} </mat-cell>
-              </ng-container>
-              <ng-container matColumnDef="class">
-                <mat-header-cell *matHeaderCellDef> Klasse </mat-header-cell>
-                <mat-cell *matCellDef="let log"> {{log.class}} </mat-cell>
-              </ng-container>
-              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-            </mat-table>
-          </mat-card>
-
           <mat-card class="full">
-            Dokumente
-          </mat-card>
+            <div class="data-list">
+              <div class="data">
+                <h4>Lieferdatum</h4>
+                <p>16.08.2018</p>
+              </div>
+              <div class="data">
+                <h4>Status</h4>
+                <p>In Bearbeitung</p>
+              </div>
+              <div class="data">
+                <h4>Letzte Änderung</h4>
+                <p>14.08.2018</p>
+              </div><div class="data">
+                <h4>Lieferdatum</h4>
+                <p>16.08.2018</p>
+              </div>
+            </div>
+            </mat-card>
 
-          <mat-card class="full">
+            <mat-card class="half">
+              <mat-card-title>
+                Kunde
+              </mat-card-title>
+              SMS Maschinenbau GmbH<br />
+              Brunnenstraße 117 – 119<br />
+              D-72461 Albstadt<br />
+              Telefon: (+49) 07432 / 98408-0<br />
+              E-Mail: sms@sms-gmbh.de<br />
+              Internet: www.sms-gmbh.de<br />
+            </mat-card>
 
-          </mat-card>
+            <mat-card class="half">
+              <mat-list>
+                <h3>Kaufmännisch</h3>
+                <mat-list-item>Laura Lohmüller</mat-list-item>
+                <mat-list-item>Tim Quarleiter</mat-list-item>
+                <h3>Technisch</h3>
+                <mat-list-item>Tobias Seifriz</mat-list-item>
+                <h3>Coach</h3>
+                <mat-list-item>Jasmin Bögle</mat-list-item>
+                </mat-list>
+            </mat-card>
+
+            <mat-card class="full list-card">
+              <mat-card-title>
+                Log
+              </mat-card-title>
+              <mat-table #table [dataSource]="dataSourceShort">
+                <ng-container matColumnDef="dateTime">
+                  <mat-header-cell *matHeaderCellDef> Datum </mat-header-cell>
+                  <mat-cell *matCellDef="let log"> {{log.dateTime}} </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="employee">
+                  <mat-header-cell *matHeaderCellDef> Mitarbeiter </mat-header-cell>
+                  <mat-cell *matCellDef="let log"> {{log.employee}} </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="logText">
+                  <mat-header-cell *matHeaderCellDef> Text </mat-header-cell>
+                  <mat-cell *matCellDef="let log"> {{log.logText}} </mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="class">
+                  <mat-header-cell *matHeaderCellDef> Klasse </mat-header-cell>
+                  <mat-cell *matCellDef="let log"> {{log.class}} </mat-cell>
+                </ng-container>
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+              </mat-table>
+            </mat-card>
+
+            <mat-card class="full">
+              <mat-card-title>
+                Dokumente
+              </mat-card-title>
+
+            </mat-card>
+
+            <mat-card class="full">
+              <mat-card-title>
+                Hinweis
+              </mat-card-title>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </mat-card>
 
         </div>
         </mat-tab>
