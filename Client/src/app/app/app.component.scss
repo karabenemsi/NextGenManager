@@ -1,0 +1,43 @@
+@import '../../scss/2_defs/_vars.scss';
+
+mat-sidenav {
+  background: $c_gray;
+  color: $c_gray_f;
+}
+
+
+.mat-column-logText{
+
+}
+
+
+main {
+  width: calc(100% - 2rem);
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 1300px
+}
+
+.headbar{
+  padding-bottom: 1rem;
+  h1 {
+
+  }
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  .full {
+    width: calc(100% - 1rem);
+  }
+
+  .half {
+    width: calc(50% - 1rem);
+  }
+
+  mat-card {
+    margin: 0.5rem;
+  }
+}

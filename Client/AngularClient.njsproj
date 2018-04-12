@@ -66,6 +66,9 @@
     <Content Include="src\scss\4_material-custom\accordion.scss">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\scss\4_material-custom\tabs.scss">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\styles.scss" />
     <Content Include="src\theme.scss" />
     <Content Include="tsconfig.json" />

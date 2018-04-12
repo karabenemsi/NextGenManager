@@ -5,7 +5,120 @@
 
     </ngm-navigation-side>
   </mat-sidenav>
-    <main style="height: 100vh">
-      Main Content
-    </main>
+  <main style="min-height: calc(100vh - 3rem)">
+
+    <!--// TODO : Auslagern in getrennte Komponenten-->
+    <div class="headbar">
+    <h1 class="title"><span class="number">NG-726</span> Späne sammeln und ordnen</h1>
+
+    </div>
+    
+    <mat-tab-group>
+      <mat-tab label="Überblick">
+        <div class="flex-wrapper">
+
+          <mat-card class="half">
+              Kunde
+          </mat-card>
+
+          <mat-card class="half">
+            Zuständig
+          </mat-card>
+
+          <mat-card  class="full">
+            <mat-table #table [dataSource]="dataSourceShort">
+              <ng-container matColumnDef="dateTime">
+                <mat-header-cell *matHeaderCellDef> Datum </mat-header-cell>
+                <mat-cell *matCellDef="let log"> {{log.dateTime}} </mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="employee">
+                <mat-header-cell *matHeaderCellDef> Mitarbeiter </mat-header-cell>
+                <mat-cell *matCellDef="let log"> {{log.employee}} </mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="logText">
+                <mat-header-cell *matHeaderCellDef> Text </mat-header-cell>
+                <mat-cell *matCellDef="let log"> {{log.logText}} </mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="class">
+                <mat-header-cell *matHeaderCellDef> Klasse </mat-header-cell>
+                <mat-cell *matCellDef="let log"> {{log.class}} </mat-cell>
+              </ng-container>
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+          </mat-card>
+
+          <mat-card class="full">
+            Dokumente
+          </mat-card>
+
+          <mat-card class="full">
+
+          </mat-card>
+
+        </div>
+        </mat-tab>
+      <mat-tab label="Log">
+
+        <mat-table #table [dataSource]="dataSource">
+          <!-- Position Column -->
+          <ng-container matColumnDef="dateTime">
+            <mat-header-cell *matHeaderCellDef> Datum </mat-header-cell>
+            <mat-cell *matCellDef="let log"> {{log.dateTime}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="employee">
+            <mat-header-cell *matHeaderCellDef> Mitarbeiter </mat-header-cell>
+            <mat-cell *matCellDef="let log"> {{log.employee}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="logText">
+            <mat-header-cell *matHeaderCellDef> Text </mat-header-cell>
+            <mat-cell *matCellDef="let log"> {{log.logText}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="class">
+            <mat-header-cell *matHeaderCellDef> Klasse </mat-header-cell>
+            <mat-cell *matCellDef="let log"> {{log.class}} </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+
+      </mat-tab>
+      <mat-tab label="Dokumente">
+
+      </mat-tab>
+      <mat-tab label="Metadaten">
+        <table>
+          <tr>
+            <td>Angenommen am</td>
+            <td>12.11.1012</td>
+          </tr>
+          <tr>
+            <td>Gepl. Lieferdatum</td>
+            <td>12.12.1023</td>
+          </tr>
+          <tr>
+            <td>Gesamtpreis</td>
+            <td>300,23</td>
+          </tr>
+          <tr>
+            <td>Kalkulation hinterlegt</td>
+            <td>false</td>
+          </tr>
+          <tr>
+            <td>Rechnung hinterlegt</td>
+            <td>true</td>
+          </tr>
+          <tr>
+            <td>Auftrag bezahlt</td>
+            <td>false</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </mat-tab>
+</mat-tab-group>
+
+  </main>
 </mat-sidenav-container>
