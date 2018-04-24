@@ -1,57 +1,35 @@
 {
-  "name": "nextgenmanager-server",
+  "name": "NextGenManagerServer",
   "version": "1.0.0",
-  "description": "NextGenManager",
-  "keywords": [
-    "loopback-application",
-    "loopback"
-  ],
-  "main": "index.js",
+  "main": "server/server.js",
   "engines": {
-    "node": ">=8"
+    "node": ">=4"
   },
   "scripts": {
-    "build": "lb-tsc es2017",
-    "build:watch": "lb-tsc es2017 --watch",
-    "clean": "lb-clean",
-    "lint": "npm run prettier:check && npm run tslint",
-    "lint:fix": "npm run prettier:fix && npm run tslint:fix",
-    "prettier:cli": "lb-prettier \"**/*.ts\" \"**/*.js\"",
-    "prettier:check": "npm run prettier:cli -- -l",
-    "prettier:fix": "npm run prettier:cli -- --write",
-    "tslint": "lb-tslint",
-    "tslint:fix": "npm run tslint -- --fix",
-    "pretest": "npm run clean && npm run build",
-    "test": "lb-mocha --allow-console-logs \"DIST/test\"",
-    "posttest": "npm run lint",
-    "start": "npm run build && node .",
-    "prepublishOnly": "npm run test"
+    "lint": "eslint .",
+    "start": "node .",
+    "posttest": "npm run lint && nsp check"
   },
-  "repository": {
-    "type": "git"
-  },
-  "author": "",
-  "license": "MIT",
-  "files": [
-    "README.md",
-    "index.js",
-    "index.d.ts",
-    "dist",
-    "src"
-  ],
   "dependencies": {
-    "@loopback/context": "^0.4.0",
-    "@loopback/boot": "^0.4.1",
-    "@loopback/core": "^0.3.1",
-    "@loopback/rest": "^0.4.1",
-    "@loopback/openapi-v3": "^0.4.1"
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "helmet": "^3.10.0",
+    "loopback": "^3.19.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^6.0.0",
+    "loopback-connector-mongodb": "^1.18.1",
+    "serve-favicon": "^2.0.1",
+    "strong-error-handler": "^2.0.0"
   },
   "devDependencies": {
-    "@loopback/build": "^0.3.3",
-    "@types/node": "^8.10.0",
-    "@loopback/testlab": "^0.4.1",
-    "@types/mocha": "^5.0.0",
-    "mocha": "^5.0.4",
-    "source-map-support": "^0.5.4"
-  }
+    "eslint": "^3.17.1",
+    "eslint-config-loopback": "^8.0.0",
+    "nsp": "^2.1.0"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "license": "UNLICENSED",
+  "description": "NextGenManagerServer"
 }
