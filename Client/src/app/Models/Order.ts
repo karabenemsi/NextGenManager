@@ -20,7 +20,4 @@ class Order {
   dateInbox: Date;
   dateAccepted: Date;
   dateDone: Date;
-
-
-
 }
