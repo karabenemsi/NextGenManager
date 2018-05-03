@@ -1,5 +1,6 @@
+import { Log } from ".";
 
-class Order {
+export class Order {
   id: string;
   title: string;
   details: string;
@@ -10,13 +11,8 @@ class Order {
     buisness: string[]
   };
   customer: string;
-  log: string[];
+  log: Log[];
   comment: string;
-  changes: {
-    date: Date;
-    event: string;
-    issuer: string;
-  }[];
   dateInbox: Date;
   dateAccepted: Date;
   dateDone: Date;
