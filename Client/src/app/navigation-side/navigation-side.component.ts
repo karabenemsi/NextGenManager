@@ -10,6 +10,8 @@ export class NavigationSideComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+
   }
 
 }
